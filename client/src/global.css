@@ -2,11 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    color-scheme: dark;
-    @apply bg-neutral-800 text-neutral-200
+@font-face {
+    font-family: 'Open Sans';
+    src: url('font/open_sans/OpenSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.center-container {
-    @apply w-full h-full flex justify-center
+@font-face {
+    font-family: 'Open Sans';
+    src: url('font/open_sans/OpenSans-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('font/open_sans/OpenSans-Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('font/open_sans/OpenSans-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+html {
+    color-scheme: dark;
+}
+
+body {
+    @apply bg-neutral-800 text-slate-100 min-h-screen;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
