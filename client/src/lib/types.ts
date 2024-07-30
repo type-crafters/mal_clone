@@ -30,3 +30,26 @@ export type Anime = {
     seasons: number;
     episodes: number;
 };
+
+export type Accordion = {
+    name: string;
+    items: AccordionCard[]
+}
+
+
+export enum AccordionCardType {
+    HTML,
+    TEXT
+}
+
+export type AccordionCard = {
+    id: string;
+    title: string;
+    type: AccordionCardType;
+    content: string;
+}
+
+export type ModalLink = {
+    href: string;
+    text: string;
+}

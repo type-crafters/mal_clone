@@ -1,19 +1,20 @@
 <script lang="ts">
     import HeroBanner from "$lib/HeroBanner.svelte";
     import StarRating from "$lib/StarRating.svelte";
-    import type { Source, Track, Video, Picture, Anime } from "$lib/types.ts";
+    import Accordion from "$lib/Accordion.svelte";
+    import type { Anime } from "$lib/types";
 
     export const anime: Anime = {
         video: {
             srcset: [ { src: "/video/video.mp4", mime: "video/mp4" } ],
             tracks: [ { kind: "captions", src: "static/track/captions.vtt", lang: "en", label: "English" } ],
-            title: "My Hero Academia trailer"
+            title: "Super Mario 3D World trailer"
         },
         image: {
             srcset: [ {media: "(min-width: 0px;)", src: "/image/image.png", mime: "image/png" } ],
-            title: "My Hero Academia poster"
+            title: "Super Mario 3D World poster"
         },
-        name: "My Hero Academia",
+        name: "Super Mario 3D World",
         seasons: 7,
         episodes: 26,
     }
@@ -31,24 +32,22 @@
         <div id="star-ratings">
             <StarRating size="md"/>
         </div>
-        <div id="action-buttons" class="my-6 text-sm md:text-md flex w-full md:w-1/2 xl:w-1/3 gap-5">
+        <div id="action-buttons" class="my-6 text-sm md:text-md flex flex-col sm:flex-row w-full md:w-3/4 lg:w-1/2 2xl:w-1/3 gap-5">
             <button class="button bg-blue-500 hover:bg-blue-600 active:bg-blue-700" id="list">
-                <i class="icon bi bi-plus"></i>
+                <i class="icon bi bi-plus-lg"></i>
                 <span>ADD TO LIST</span>
             </button>
-            <button class="button bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700" id="list">
-                <i class="icon bi bi-filetype-php"></i>
-                <span>explode()</span>
+            <button class="button bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700" id="fav">
+                <i class="icon bi bi-heart-fill"></i>
+                <span>ADD TO FAVORITES</span>
             </button>
         </div>
     </section>
+    <Accordion/>
 </main>
 
-<style>
-    .icon {
-        @apply flex items-center justify-center;
-    }
+<style lang="postcss">
     .button {
-        @apply flex flex-1 items-center justify-center gap-1 p-2 rounded-lg text-lg duration-150;
+        @apply flex flex-1 items-center justify-center gap-1 p-2 rounded-full text-lg duration-150;
     }
 </style>

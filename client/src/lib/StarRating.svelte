@@ -1,7 +1,7 @@
 <script lang="ts">
-    export const size: string = "md";
-    export const rating: number = 4.49999;
-    export const reviews: number = 211456;
+    export let size: string = "md";
+    export let rating: number = 4.5;
+    export let reviews: number = 211456;
 
     const sizes: { [key: string]: number } = {
         xs: 1.0,

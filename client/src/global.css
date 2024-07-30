@@ -4,28 +4,28 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('font/open_sans/OpenSans-Regular.ttf');
+    src: url('/font/open_sans/OpenSans-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('font/open_sans/OpenSans-Bold.ttf');
+    src: url('/font/open_sans/OpenSans-Bold.ttf');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('font/open_sans/OpenSans-Italic.ttf');
+    src: url('/font/open_sans/OpenSans-Italic.ttf');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('font/open_sans/OpenSans-BoldItalic.ttf');
+    src: url('/font/open_sans/OpenSans-BoldItalic.ttf');
     font-weight: bold;
     font-style: italic;
 }
@@ -37,4 +37,8 @@ html {
 body {
     @apply bg-neutral-800 text-slate-100 min-h-screen;
     font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.icon {
+    @apply flex items-center justify-center;
 }
