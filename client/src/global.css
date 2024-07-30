@@ -30,6 +30,69 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('/font/geist_mono/GeistMono-Regular.ttf') format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('/font/geist_mono/GeistMono-Medium.ttf') format("ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('/font/geist_mono/GeistMono-Bold.ttf') format("ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('/font/geist_mono/GeistMono-Black.ttf') format("ttf");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('/font/geist_mono/GeistMono-UltraBlack.ttf') format("ttf");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('/font/geist_mono/GeistMono-Light.ttf') format("ttf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('/font/geist_mono/GeistMono-SemiBold.ttf') format("ttf");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('/font/geist_mono/GeistMono-Thin.ttf') format("ttf");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('/font/geist_mono/GeistMono-UltraLight.ttf') format("ttf");
+    font-weight: 200;
+    font-style: normal;
+}
+
 html {
     color-scheme: dark;
 }
@@ -41,4 +104,8 @@ body {
 
 .icon {
     @apply flex items-center justify-center;
+}
+
+.header_font {
+    font-family: 'Geist Mono', sans-serif;
 }

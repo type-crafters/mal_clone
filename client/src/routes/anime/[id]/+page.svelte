@@ -26,7 +26,6 @@
         <h1 id="media-name" class="text-3xl font-semibold my-4">{anime.name}</h1>
         <div id="seasons-episodes" class="flex items-center gap-3 text-sm text-slate-400">
             <span id="season-count">{anime.seasons} Seasons</span>
-            |
             <span id="episode-count">{anime.episodes} Episodes (on average)</span>
         </div>
         <div id="star-ratings">

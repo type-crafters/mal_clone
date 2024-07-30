@@ -2,11 +2,11 @@
     import type { Anime } from "$lib/types";
 
     export const anime: Anime = {
-        // video: {
-        //     srcset: [ { src: "/video/video.mp4", mime: "video/mp4" } ],
-        //     tracks: [ { kind: "captions", src: "static/track/captions.vtt", lang: "en", label: "English" } ],
-        //     title: "My Hero Academia trailer"
-        // },
+        video: {
+            srcset: [ { src: "/video/video.mp4", mime: "video/mp4" } ],
+            tracks: [ { kind: "captions", src: "static/track/captions.vtt", lang: "en", label: "English" } ],
+            title: "My Hero Academia trailer"
+        },
         image: {
             srcset: [{ media: "(min-width: 0px;)", src: "/image/image.png", mime: "image/png" }],
             title: "My Hero Academia poster",
