@@ -27,7 +27,6 @@ export type Anime = {
     video?: Video;
     image: Picture;
     name: string,
-    synopsis: string,
     seasons: number;
     episodes: number;
 };

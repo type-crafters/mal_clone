@@ -1,13 +1,13 @@
 
-<div class="bg-tune-900 px-6 h-16">
+<div class="bg-tune-900 px-6 h-16 sm:h-fit">
     <div class="flex justify-end sm:justify-center items-center max-[639px]:pt-3.5 max-w-6xl mx-auto header_font ">
-        <nav class="sm:flex justify-between items-center w-full mx-4 my-2 hidden gap-2">
-            <div class="flex justify-center w-1/3 gap-3 text-sm sm:text-lg">
+        <nav class="sm:flex justify-between items-center w-full mx-4 my-1 hidden gap-2">
+            <div class="flex justify-center w-1/3 gap-3 text-sm sm:text-[17px]">
                 <a href="/anime" class="hover:bg-tune-500 py-1 px-2 rounded-lg">Anime</a>
                 <a href="/manga" class="hover:bg-tune-500 py-1 px-2 rounded-lg">Manga</a>
                 <a href="/genres" class="hover:bg-tune-500 py-1 px-2 rounded-lg">Géneros</a>
             </div>
-            <div class="flex justify-center w-1/3 text-md sm:text-xl">
+            <div class="flex justify-center w-1/3 text-md sm:text-2xl">
                 Anime Dex
                 <!-- placeholder Logo -->
                 <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
@@ -16,11 +16,11 @@
             </div>
             <div class="flex justify-center w-1/3 items-center gap-5">
                 <form method="post" id="search">
-                    <div id="searchbox-container" class="flex flex-row-reverse gap-1 items-center rounded-full px-4 py-1 bg-neutral-800 shadow-inner">
-                        <button type="submit" id="search">
-                            <i class="bi bi-search text-xl"></i>
+                    <div id="searchbox-container" class="flex flex-row-reverse py-0.5 pr-3 items-center rounded-full bg-neutral-800 shadow-inner">
+                        <button type="submit" id="search" class="pb-0.5">
+                            <i class="bi bi-search text-md"></i>
                         </button>
-                        <input type="search" size="9" name="searchbox" id="searchbox" class="py-1 px-4 bg-transparent focus:outline-none" placeholder="Find anime...">
+                        <input type="search" size="20" name="searchbox" id="searchbox" class="text-[90%] pl-3 bg-transparent focus:outline-none" placeholder="Find anime...">
                     </div>
                 </form>
 
@@ -39,6 +39,7 @@
         </nav>
 
         <input id="sidebar-active" class="hidden" type="checkbox">
+        <label id="overlay" for="sidebar-active"></label>
         <!-- mobile navbar -->
         <nav id="mobile-navbar" class="fixed top-0 right-0 z-10 w-72 h-full bg-tune-800 transform translate-x-full transition-transform duration-500 ease-in-out">
             
@@ -51,11 +52,11 @@
 
             <div class="flex items-center gap-5 py-20 px-4">
                 <form method="post" id="search">
-                    <div id="searchbox-container" class="flex flex-row-reverse gap-1 items-center rounded-full px-4 py-1 bg-neutral-800 shadow-inner">
-                        <button type="submit" id="search">
-                            <i class="bi bi-search text-xl"></i>
+                    <div id="searchbox-container" class="flex flex-row-reverse py-0.5 pr-3 items-center rounded-full bg-neutral-800 shadow-inner">
+                        <button type="submit" id="search" class="pb-0.5">
+                            <i class="bi bi-search text-md"></i>
                         </button>
-                        <input type="search" size="7" name="searchbox" id="searchbox" class="py-1 px-4 bg-transparent focus:outline-none" placeholder="Find anime...">                    
+                        <input type="search" size="14" name="searchbox" id="searchbox" class="text-[85%] pl-3 bg-transparent focus:outline-none" placeholder="Find anime...">
                     </div>
                 </form>
 
@@ -84,9 +85,29 @@
 </div>
 
 <style>
-
     #sidebar-active:checked ~ #mobile-navbar {
-
         transform: translateX(0);
+    }
+
+    #sidebar-active:checked ~ #overlay {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: 9;
+    }
+
+    #searchbox {
+        -webkit-appearance: none; /* Para Safari y Chrome */
+        -moz-appearance: none; /* Para Firefox */
+        appearance: none; /* Estándar */
+    }
+
+    /* Esto también ayuda a eliminar el icono de la "x" en algunos navegadores */
+    input[type="search"]::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        appearance: none;
+        font-size: 65%;
     }
 </style>
